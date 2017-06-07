@@ -1,0 +1,79 @@
+#######################################
+# Syntax Coloring Map For Test
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+LS868	KEYWORD1	LS868
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+getModuleID	KEYWORD2
+getNowPosition	KEYWORD2
+getTargetPosition	KEYWORD2
+getNowCurrent	KEYWORD2
+getLimitCurrent	KEYWORD2
+getNowTemperature	KEYWORD2
+getLimitTemperature	KEYWORD2
+getGainP	KEYWORD2
+getGainI	KEYWORD2
+getGainD	KEYWORD2
+getControlMargin	KEYWORD2
+getForwardControl	KEYWORD2
+getVoltage	KEYWORD2
+getBoundaryMax	KEYWORD2
+getBoundaryMin	KEYWORD2
+getLEDValue	KEYWORD2
+getModuleVersion	KEYWORD2
+getFirmwareVersion	KEYWORD2
+getBaudRate	KEYWORD2
+getZeroComp	KEYWORD2
+setFactoryReset	KEYWORD2
+setModuleID	KEYWORD2
+setSyncPosition	KEYWORD2
+setSyncLEDControl	KEYWORD2
+setLimitCurrent	KEYWORD2
+setLimitTemperature	KEYWORD2
+setGainP	KEYWORD2
+setGainI	KEYWORD2
+setGainD	KEYWORD2
+setControlMargin	KEYWORD2
+setForwardControl	KEYWORD2
+setBoundaryMax	KEYWORD2
+setBoundaryMin	KEYWORD2
+setBaudRate	KEYWORD2
+setZeroComp	KEYWORD2
+torquePosition	KEYWORD2
+speedPosition	KEYWORD2
+LEDControl	KEYWORD2
+syncPosition	KEYWORD2
+syncLED	KEYWORD2
+wheelMode	KEYWORD2
+activeStop	KEYWORD2
+passiveStop	KEYWORD2
+
+######################################
+# Instances (KEYWORD2)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+RED	LITERAL1
+GREEN	LITERAL1
+BLUE	LITERAL1
+CW	LITERAL1
+CCW	LITERAL1
+ALL	LITERAL1
+TORQUE	LITERAL1
+SPEED	LITERAL1
+MICRO	LITERAL1
+MINI	LITERAL1
+MIDDLE	LITERAL1
+MEGA	LITERAL1
+HARD_SERIAL	LITERAL1
+SOFT_SERIAL	LITERAL1
