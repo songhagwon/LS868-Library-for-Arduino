@@ -2,9 +2,9 @@
 
 /**
 * File		LS868.h
-* Version	v 1.1
-* Date		2017. 05. 18
-* Details	LS868.cpp 수정
+* Version	v 1.2
+* Date		2017. 06. 12
+* Details	checkPacket() 멤버함수의 권한을 private로 설정
 *
 * Copyright 2016. (주)엠알티인터내셔널 all rights reserved.
 **/
@@ -23,6 +23,7 @@
 #include <stdint.h>
 #include <Arduino.h>
 
+// 파라미터 제어용
 #define RED		0x52
 #define GREEN	0x47
 #define BLUE	0x42
@@ -31,10 +32,12 @@
 #define ALL		0xFE
 #define TORQUE	0x01
 #define SPEED	0x02
+// LSM 모듈 선택
 #define MICRO	0xB0
 #define MINI	0xC0
 #define MIDDLE	0xD0
 #define MEGA	0xE0
+// 시리얼 선택
 #define HARD_SERIAL	0x01
 #define SOFT_SERIAL	0x02
 
@@ -67,7 +70,7 @@ public:
 	int16_t getBoundaryMax(uint8_t m_id);
 	int16_t getBoundaryMin(uint8_t m_id);
 	uint8_t getLEDValue(uint8_t m_id, uint8_t m_color);
-	uint16_t getModuleVersion(uint8_t m_id);	// 모터 ProductID
+	uint16_t getModuleVersion(uint8_t m_id);		// 모터 ProductID
 	uint16_t getFirmwareVersion(uint8_t m_id);		// 모터 firmware version
 	uint32_t getBaudRate(uint8_t m_id);
 	int16_t getZeroComp(uint8_t m_id);
@@ -115,8 +118,7 @@ public:
 	*
 	**/
 
-	void begin(uint32_t baudrate);	// SoftwereSerial 통신속도 설정 함수
-	void checkPacket(void);			// Packet Check용 함수(coding)
+	void begin(uint32_t baudrate);	// SoftwereSerial 통신속도 설정 멤버함수
 
 private:
 	uint8_t m_write[8];
@@ -125,10 +127,11 @@ private:
 	uint8_t product_id;
 	bool serial_flag;
 	int pin_direction;
+
+	bool checkPacket(void);			// Packet Check용 멤버함수(coding)
 	void eepPROG(uint8_t m_id);		// setMotorID, setZeroComp에는 필요 없음
-	void clearBuffer(void);
+	void clearBuffer(void);			// m_write, m_read 초기화
 	void mTxWrite(uint8_t m_id, uint8_t m_instruction);
 	void mRxWrite(void);
-
 };
 #endif // !LS868

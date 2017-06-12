@@ -1,3 +1,6 @@
+/*
+ * getBaudRate() 함수 사용 예시
+ */
 #include <LS868.h>
 
 // LSM_micro 모터와 Serial을 사용하는 생성자를 선언합니다.
@@ -14,4 +17,3 @@ void loop() {
   // 1초 동안 기다립니다.
   delay(1000);
 }
-

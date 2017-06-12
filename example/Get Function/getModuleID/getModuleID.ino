@@ -1,3 +1,6 @@
+/*
+ * getModuleID() 함수 사용 예시
+ */
 #include <LS868.h>
 
 LS868 micro(MICRO, HARD_SERIAL);
@@ -12,4 +15,4 @@ void loop() {
   Serial.println(micro.getModuleID(1));
   // 1초 동안 기다립니다.
   delay(1000);
-}   
+}

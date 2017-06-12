@@ -1,3 +1,6 @@
+/*
+ * activeStop() 함수 사용 예시
+ */
 #include <LS868.h>
 
 // LSM_micro 모터와 Serial을 사용하는 생성자를 선언합니다.
@@ -10,7 +13,7 @@ void setup() {
 
 void loop() {
   // 1번 모터가 CCW 방향과 100%의 속력으로 회전합니다.
-  micro.wheelMode(1, CCW, 100);
+  micro.wheelMode(1, 100, CCW);
   // 1초 동안 기다립니다.
   delay(1000);
 
@@ -19,7 +22,3 @@ void loop() {
   // 1초 동안 기다립니다.
   delay(1000);
 }
-
-
-
-
