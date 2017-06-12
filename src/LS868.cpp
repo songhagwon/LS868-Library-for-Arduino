@@ -1,6 +1,6 @@
 /**
 * File		LS868.ccp
-* Version	v 1.1
+* Version	v 1.2
 * Date		2017. 05. 18
 * Details	mRxWrite 멤버함수 데이터 처리 개선
 *			모든 멤버함수내 delay 개선 또는 삭제
