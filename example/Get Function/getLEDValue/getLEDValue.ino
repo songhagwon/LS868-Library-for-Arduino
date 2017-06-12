@@ -1,7 +1,7 @@
 #include <LS868.h>
 
 // LSM_micro 모터와 Serial을 사용하는 생성자를 선언합니다.
-LS868 micro(LSM_MICRO, HARD_SERIAL);
+LS868 micro(MICRO, HARD_SERIAL);
 
 void setup() {
   // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
@@ -10,15 +10,15 @@ void setup() {
 
 void loop() {
 
+  // 1번 모터의 LED를 R : 100, G : 250, B : 50으로 설정합니다.
   micro.LEDControl(1, 100, 250, 50);
-  delay(5);
-  // 0 ~ 253의 숫자를 입력하여 해당 아이디와 일치하는 모터의 최소위치값을 출력합니다.
-  Serial.println(micro.getLEDValue(1, LSM_RED));
-  delay(5);
-  Serial.println(micro.getLEDValue(1, LSM_GREEN));
-  delay(5);
-  Serial.println(micro.getLEDValue(1, LSM_BLUE));
+  // 1번 모터의 빨간색 값을 시리얼로 출력합니다.
+  Serial.println(micro.getLEDValue(1, RED));
+  // 1번 모터의 초록색 값을 시리얼로 출력합니다.
+  Serial.println(micro.getLEDValue(1, GREEN));
+  // 1번 모터의 파란색 값을 시리얼로 출력합니다.
+  Serial.println(micro.getLEDValue(1, BLUE));
   // 1초간 기다립니다.
-  delay(5000);
+  delay(1000);
 }
 

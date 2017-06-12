@@ -9,9 +9,16 @@ void setup() {
 }
 
 void loop() {
-  // 1번 모터의 D 게인값을 시리얼로 출력합니다.
-  Serial.println(micro.getGainD(1));
+  // 1번 모터가 CW 방향과 100%의 속력으로 회전합니다.
+  micro.wheelMode(1, CW, 100);
+  // 1초동안 기다립니다.
+  delay(1000);
+
+  // 모든 모터가 CCW 방향과 25%의 속력으로 회전합니다.
+  micro.torquePosition(ALL, CCW, 25);
   // 1초동안 기다립니다.
   delay(1000);
 }
+
+
 

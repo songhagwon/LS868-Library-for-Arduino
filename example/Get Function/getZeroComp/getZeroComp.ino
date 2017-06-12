@@ -6,14 +6,14 @@ LS868 micro(LSM_MICRO, HARD_SERIAL);
 void setup() {
   // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
   micro.begin(1000000);
-  micro.torquePosition(1, 100, 0);
-  micro.setZeroComp(1,0);
 }
 
 void loop() {
-  // 0 ~ 253의 숫자를 입력하여 해당 아이디와 일치하는 모터의 영점을 출력합니다.
+  // 1번 모터의 영점 step 값을 10으로 설정합니다.
+  micro.setZeroComp(1, 10);
+  // 1번 모터의 영점 step 값을 시리얼로 출력합니다.
   Serial.println(micro.getZeroComp(1));
-  // 1초간 기다립니다.
+  // 1초동안 기다립니다.
   delay(1000);
 }
 
