@@ -9,8 +9,10 @@ LS868 micro(MICRO, HARD_SERIAL);
 void setup() {
     // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
     micro.begin(1000000);
-    // 1번 모터를 공장 초기화 상태로 설정합니다.
+    // 1번 모터를 공장 초기화 상태로 설정합니다.(공장 초기화 ID : 0);
     micro.setFactoryReset(1);
+    // 모든 모터를 공장 초기화 상태로 설정합니다.(공장 초기화 ID : 0);
+    micro.setFactoryReset(ALL);
 }
 
 void loop() {

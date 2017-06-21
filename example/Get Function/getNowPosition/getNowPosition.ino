@@ -8,7 +8,7 @@ LS868 micro(MICRO, HARD_SERIAL);
 
 void setup() {
   micro.begin(1000000);
-  // 1번 모터가 CCW 방향과 50% 속력으로 회전합니다.
+  // 1번 모터가 50%의 속력과 CW 방향으로 회전합니다.
   micro.wheelMode(1, 50, CCW);
 }
 

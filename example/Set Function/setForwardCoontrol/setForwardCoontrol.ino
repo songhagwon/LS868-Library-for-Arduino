@@ -1,5 +1,5 @@
 /*
- * activeStop() 함수 사용 예시
+ * setForwardControl() 함수 사용 예시
  */
 #include <LS868.h>
 
@@ -9,16 +9,13 @@ LS868 micro(MICRO, HARD_SERIAL);
 void setup() {
   // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
   micro.begin(1000000);
+  // 1번 모터의 ForwardControl을 100으로 설정합니다.
+  micro.setForwardControl(1, 100);
 }
 
 void loop() {
-  // 1번 모터가 100%의 속력과 CCW 방향으로 회전합니다.
-  micro.wheelMode(1, 100, CCW);
-  // 1초 동안 기다립니다.
-  delay(1000);
-
-  // 모든 모터를 현재 위치에서 정지 시킵니다.
-  micro.activeStop(ALL);
+  // 1번 모터의 ForwardControl값을 시리얼로 출력합니다.
+  Serial.println(micro.getForwardControl(1));
   // 1초 동안 기다립니다.
   delay(1000);
 }

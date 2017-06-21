@@ -8,12 +8,12 @@ LS868 micro(MICRO, HARD_SERIAL);
 
 void setup() {
   // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
-  micro.begin(1000000);
+  micro.begin(1000000);  
+  // 1번 모터의 LED를 R : 100, G : 250, B : 50으로 설정합니다.
+  micro.LEDControl(1, 100, 250, 50);
 }
 
 void loop() {
-  // 1번 모터의 LED를 R : 100, G : 250, B : 50으로 설정합니다.
-  micro.LEDControl(1, 100, 250, 50);
   // 1번 모터의 빨간색 값을 시리얼로 출력합니다.
   Serial.println(micro.getLEDValue(1, RED));
   // 1번 모터의 초록색 값을 시리얼로 출력합니다.

@@ -14,11 +14,11 @@ void setup() {
 void loop() {
   // 1번 모터의 LED를 R:50, G:50, B:0의 값으로 제어합니다.
   micro.LEDControl(1, 50, 50, 50);
-  // 1초동안 기다립니다.
+  // 1초 동안 기다립니다.
   delay(1000);
 
   // 모든 모터의 LED를 R:0, G:250, B:0의 값으로 제어합니다.
   micro.speedPosition(ALL, 0, 250, 0);
-  // 1초동안 기다립니다.
+  // 1초 동안 기다립니다.
   delay(1000);
 }

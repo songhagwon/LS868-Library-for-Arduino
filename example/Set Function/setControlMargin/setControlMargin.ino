@@ -9,7 +9,7 @@ LS868 micro(MICRO, HARD_SERIAL);
 void setup() {
   // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
   micro.begin(1000000);
-  // 1번 모터의 step 오차 범위를 4setp으로 설정합니다.
+  // 1번 모터의 step 오차 범위를 4 setp으로 설정합니다.
   micro.setControlMargin(1, 4);
 }
 

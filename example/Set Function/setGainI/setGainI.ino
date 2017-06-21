@@ -9,12 +9,12 @@ LS868 micro(MICRO, HARD_SERIAL);
 void setup() {
   // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
   micro.begin(1000000);
-  // 1번 모터의 I 게인을 50으로 설정합니다.
+  // 1번 모터의 I Gain을 50으로 설정합니다.
   micro.setGainI(1, 50);
 }
 
 void loop() {
-  // 1번 모터의 I 게인값을 시리얼로 출력합니다.
+  // 1번 모터의 I Gain값을 시리얼로 출력합니다.
   Serial.println(micro.getGainI(1));
   // 1초 동안 기다립니다.
   delay(1000);

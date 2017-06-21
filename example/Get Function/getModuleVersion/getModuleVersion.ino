@@ -12,8 +12,8 @@ void setup() {
 }
 
 void loop() {
-  // 1번 모터의 모듈 ID 값을 시리얼로 출력합니다.
+  // 1번 모터의 모듈 번호를 시리얼로 출력합니다.
   Serial.println(micro.getModuleVersion(1));
-  // 1초동안 기다립니다.
+  // 1초 동안 기다립니다.
   delay(1000);
 }

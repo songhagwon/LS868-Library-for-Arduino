@@ -1,10 +1,10 @@
 #pragma once
 
-/**
+/*
 * File		LS868.h
-* Version	v 1.2
-* Date		2017. 06. 12
-* Details	checkPacket() 멤버함수의 권한을 private로 설정
+* Version	v 1.3
+* Date		2017. 06. 21
+* Details	변경사항 없음
 *
 * Copyright 2016. (주)엠알티인터내셔널 all rights reserved.
 **/
@@ -118,7 +118,7 @@ public:
 	*
 	**/
 
-	void begin(uint32_t baudrate);	// SoftwereSerial 통신속도 설정 멤버함수
+	void begin(uint32_t baudrate);	// SoftwereSerial 통신속도 설정 함수
 
 private:
 	uint8_t m_write[8];
@@ -128,9 +128,9 @@ private:
 	bool serial_flag;
 	int pin_direction;
 
-	bool checkPacket(void);			// Packet Check용 멤버함수(coding)
+	bool checkPacket(void);			// Packet Check 함수
 	void eepPROG(uint8_t m_id);		// setMotorID, setZeroComp에는 필요 없음
-	void clearBuffer(void);			// m_write, m_read 초기화
+	void clearBuffer(void);			// m_write, m_read 초기화 함수
 	void mTxWrite(uint8_t m_id, uint8_t m_instruction);
 	void mRxWrite(void);
 };

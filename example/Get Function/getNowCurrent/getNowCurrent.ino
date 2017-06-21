@@ -9,7 +9,7 @@ LS868 micro(MICRO, HARD_SERIAL);
 void setup() {
   // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
   micro.begin(1000000);  
-  // 1번 모터가 CCW 방향과 50% 속력으로 회전합니다.
+  // 1번 모터가 50%의 속력과 CCW 방향으로 회전합니다.
   micro.wheelMode(1, 50, CCW);
 }
 

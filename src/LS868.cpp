@@ -1,11 +1,11 @@
 /**
 * File		LS868.ccp
-* Version	v 1.2
-* Date		2017. 05. 18
-* Details	mRxWrite 멤버함수 데이터 처리 개선
-*			모든 멤버함수내 delay 개선 또는 삭제
-*			checkPacket으로 패킷 확인 후 각 
-*
+* Version	v 1.3
+* Date		2017. 06. 21
+* Details	pin_direction을 HIGH로 초기화
+*			데이터 수신 후 pin_direction을 HIGH로 변경
+*			핀 신호 전환 딜레이 User Guide 권장시간으로 변경
+*			
 * Copyright 2016. (주)엠알티인터내셔널 all rights reserved.
 **/
 
@@ -29,6 +29,8 @@ LS868::LS868(uint8_t product, uint8_t serial_mode)
 	{
 		serial_flag = false;
 	}
+
+	digitalWrite(pin_direction, HIGH);	// pin_direction을 HIGH로 초기화
 }
 
 
@@ -91,7 +93,7 @@ int16_t LS868::getNowPosition(uint8_t m_id)
 			if (m_read[2] == m_id && m_read[3] == 0x02)
 				value = m_read[5] << 8 | m_read[6];
 		}
-	}		
+	}
 
 	return value;
 }
@@ -882,7 +884,7 @@ void LS868::begin(uint32_t baudrate)
 {
 	if (serial_flag == true)
 		Serial.begin(baudrate);
-	else if (serial_flag == false)
+	else
 		softSerial.begin(baudrate);
 }
 
@@ -978,6 +980,9 @@ void LS868::mRxWrite(void)
 		}
 		softSerial.flush();
 	}
+
+	delay(2);
+	digitalWrite(pin_direction, HIGH);
 }
 
 

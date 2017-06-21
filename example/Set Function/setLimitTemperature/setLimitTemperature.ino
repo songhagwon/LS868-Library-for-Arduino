@@ -9,12 +9,12 @@ LS868 micro(MICRO, HARD_SERIAL);
 void setup() {
   // 통신속도를 1000000 bps로 설정하여 시리얼을 시작합니다.
   micro.begin(1000000);
-  // 1번 모터의 한계 온도를 800으로 설정합니다.
-  micro.setLimitTemperature(1, 800);
+  // 1번 모터의 최대 온도를 80으로 설정합니다.
+  micro.setLimitTemperature(1, 80);
 }
 
 void loop() {
-  // 1번 모터의 한계 온도를 시리얼로 출력합니다.
+  // 1번 모터의 최대 온도를 시리얼로 출력합니다.
   Serial.println(micro.getLimitTemperature(1));
   // 1초동안 기다립니다.
   delay(1000);
