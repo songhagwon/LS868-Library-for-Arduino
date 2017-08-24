@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map For Test
+# Syntax Coloring Map For LS868 series
 #######################################
 
 #######################################
@@ -26,7 +26,7 @@ getForwardControl	KEYWORD2
 getVoltage	KEYWORD2
 getBoundaryMax	KEYWORD2
 getBoundaryMin	KEYWORD2
-getLEDValue	KEYWORD2
+getLedValue	KEYWORD2
 getModuleVersion	KEYWORD2
 getFirmwareVersion	KEYWORD2
 getBaudRate	KEYWORD2
@@ -34,7 +34,7 @@ getZeroComp	KEYWORD2
 setFactoryReset	KEYWORD2
 setModuleID	KEYWORD2
 setSyncPosition	KEYWORD2
-setSyncLEDControl	KEYWORD2
+setSyncLedControl	KEYWORD2
 setLimitCurrent	KEYWORD2
 setLimitTemperature	KEYWORD2
 setGainP	KEYWORD2
@@ -48,9 +48,9 @@ setBaudRate	KEYWORD2
 setZeroComp	KEYWORD2
 torquePosition	KEYWORD2
 speedPosition	KEYWORD2
-LEDControl	KEYWORD2
+ledControl	KEYWORD2
 syncPosition	KEYWORD2
-syncLED	KEYWORD2
+syncLedControl	KEYWORD2
 wheelMode	KEYWORD2
 activeStop	KEYWORD2
 passiveStop	KEYWORD2
@@ -75,5 +75,8 @@ MICRO	LITERAL1
 MINI	LITERAL1
 MIDDLE	LITERAL1
 MEGA	LITERAL1
-HARD_SERIAL	LITERAL1
+SERIAL	LITERAL1
+SERIAL1	LITERAL1
+SERIAL2	LITERAL1
+SERIAL3	LITERAL1
 SOFT_SERIAL	LITERAL1
