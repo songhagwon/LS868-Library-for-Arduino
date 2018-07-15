@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-LS868	KEYWORD1	LS868
+LS868	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
